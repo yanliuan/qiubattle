@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>球球大作战</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .highlight {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #imageContainer {
+      margin-top: 20px;
+      display: none;
+    }
+    #imageContainer img {
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><span class="highlight" onclick="showImage()">球球</span>在哪里</h1>
+
+  <button onclick="showError()">在这里</button>
+  <button onclick="showError()">在这里</button>
+
+  <div id="imageContainer">
+    <img src="dog.jpg" alt="球球">
+  </div>
+
+  <script>
+    function showError() {
+      alert("错误");
+    }
+
+    function showImage() {
+      document.getElementById('imageContainer').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
